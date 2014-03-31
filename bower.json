@@ -1,14 +1,16 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
-  "version": "0.0.0",
+  "name": "angular-rest-browser",
+  "description": "A browser for REST APIs implemented in AngularJS",
+  "version": "0.1.0",
   "homepage": "https://github.com/angular/angular-seed",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "angular": "1.2.x",
-    "angular-route": "1.2.x",
-    "angular-loader": "1.2.x",
-    "angular-mocks": "~1.2.15"
+    "angular": "~1.3.0",
+    "angular-route": "~1.3.0",
+    "angular-loader": "~1.3.0",
+    "angular-mocks": "~1.3.0",
+    "angular-miller-column-browser": "https://github.com/hbmartin/angular-miller-column-browser.git",
+    "restangular": "~1.3.1"
   }
 }
