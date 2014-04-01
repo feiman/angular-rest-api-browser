@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
-  "private": true,
-  "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "name": "angular-rest-browser",
+  "private": false,
+  "version": "0.1.0",
+  "description": "A simple UI for browsing REST APIs",
+  "repository": "https://github.com/hbmartin/angular-rest-browser",
   "license": "MIT",
   "devDependencies": {
     "karma": "~0.10",
