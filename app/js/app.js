@@ -5,9 +5,10 @@
 angular.module('restBrowser', [
   'ngRoute',
   'restBrowser.controllers',
-  'millerColumnBrowser'
+  'millerColumnBrowser',
+  'restangular'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.when('/', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
+  $routeProvider.otherwise({redirectTo: '/'});
 }]);
