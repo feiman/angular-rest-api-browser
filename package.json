@@ -23,6 +23,6 @@
   "dependencies": {
     "http-proxy": "^1.0.3",
     "proxy-by-url": "0.0.3",
-    "buffet": "^0.6.3"
+    "node-static": "^0.7.3"
   }
 }

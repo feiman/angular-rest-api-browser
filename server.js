@@ -1,8 +1,8 @@
 var http = require('http'),
 	httpProxy = require('http-proxy'),
-	buffet = require('buffet'),
-	bower_root = buffet({root: './bower_components'}),
-	app_root = buffet({root: './app'}),
+	static = require('node-static');
+	bower_root = new static.Server('./bower_components'),
+	app_root = new static.Server('./app'),
 	proxy = httpProxy.createProxyServer();
 
 var proxy_url = process.argv[2];
@@ -25,9 +25,9 @@ http.createServer(function (req, res) {
 	// TODO: clean this up?
 	else if (req.url.indexOf("/bower_components") === 0) {
 		req.url = req.url.split("/bower_components")[1];
-		bower_root(req, res);
+		bower_root.serve(req, res);
 	}
 	else {
-	    app_root(req, res);
+	    app_root.serve(req, res);
 	}
 }).listen(8000);
