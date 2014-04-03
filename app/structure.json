@@ -1,0 +1,15 @@
+[
+	{ "id": "account", "parent": true},
+	{ "id": "site", "parent": true},
+	{ "id": "adunit", "parent": true},
+	{ "name": "Order", "child":
+			{ "id": "order",
+					"child": { "id": "lineitem",
+												"child" : { "id" : "ad" }
+					}
+			}
+	},
+	{ "id": "ad", "parent": true},
+	{ "id": "user", "parent": true},
+	{ "id": "session", "parent": false}
+]
