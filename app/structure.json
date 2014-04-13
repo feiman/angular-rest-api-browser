@@ -1,15 +1,20 @@
 [
-	{ "id": "account", "parent": true},
-	{ "id": "site", "parent": true},
-	{ "id": "adunit", "parent": true},
-	{ "name": "Order", "child":
-			{ "id": "order",
-					"child": { "id": "lineitem",
-												"child" : { "id" : "ad" }
-					}
-			}
+	{ "name": "Accounts",
+		"child": 	{ "id": "account",
+			"child" : { "id" : "user", "id_key" : "account_uid" }
+		}
 	},
-	{ "id": "ad", "parent": true},
-	{ "id": "user", "parent": true},
-	{ "id": "session", "parent": false}
+	{ "name": "Sites",
+		"child": { "id": "site",
+			"child": { "id": "adunit", "id_key" : "site_uid" }
+		}
+	},
+	{ "name": "Orders",
+		"child": { "id": "order",
+			"child": { "id": "lineitem", "id_key" : "order_uid",
+				"child" : { "id" : "ad", "id_key" : "lineitem_uid" }
+			}
+		}
+	},
+	{ "id": "session"}
 ]
